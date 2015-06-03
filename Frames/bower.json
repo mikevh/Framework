@@ -1,0 +1,22 @@
+{
+    "name": "Journey.Groups.WebSite",
+    "private": true,
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "angular": "1.3.8",
+        "angular-route": "1.3.8",
+        "angular-resource": "1.3.8",
+        "bootstrap": "3.3.4",
+        "font-awesome": "",
+        "jquery": "2.1.4",
+        "angular-gridster": "",
+        "angular-bootstrap": "0.13.0",
+        "ngstorage": "0.3.4"
+    }
+}

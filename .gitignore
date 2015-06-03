@@ -1,0 +1,9 @@
+bin/
+obj/
+packages/
+bower_components/
+dist/
+lib/
+node_modules/
+*.suo
+*.user

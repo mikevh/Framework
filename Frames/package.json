@@ -1,0 +1,16 @@
+{
+  "name": "Journey.Groups.WebSite",
+  "version": "1.0.0",
+  "devDependencies": {
+    "gulp": "3.8.11",
+    "gulp-angular-filesort": "1.1.1",
+    "gulp-angular-templatecache": "1.6.0",
+    "gulp-concat": "2.5.2",
+    "gulp-strip-line": "0.0.1",
+    "gulp-rimraf": "0.1.1",
+    "gulp-watch": "4.2.4"
+  },
+  "dependencies": {
+    "bower": "^1.4.1"
+  }
+}

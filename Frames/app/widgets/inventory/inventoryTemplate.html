@@ -1,0 +1,30 @@
+﻿<div class="demo-inventory-widget">
+
+    <div class="demo-inventory-heading">
+        <img ng-src="images/inventory-icon.png" alt="inventory" class="demo-inventory-icon" />
+        <span class="demo-inventory-title">Inventory</span>
+    </div>
+
+    <div class="demo-inventory-body" ng-style="selectedLocation != null && {'background-image': 'url(/images/' + selectedLocation.image + ')'}">
+        <div class="demo-inventory-area">
+
+            <div class="demo-inventory-river-name">{{selectedLocation.name}}</div>
+            <div class="demo-inventory-item">
+                <img src="/images/guide-icon.png" />
+                <span class="demo-inventory-amount">{{selectedLocation.guides}}</span>
+                <span class="demo-inventory-caption">GUIDES</span>
+            </div>
+            <div class="demo-inventory-item">
+                <img src="/images/vest-icon.png" />
+                <span class="demo-inventory-amount">{{selectedLocation.vests}}</span>
+                <span class="demo-inventory-caption">VESTS</span>
+            </div>
+            <div class="demo-inventory-item">
+                <img src="/images/raft.png" />
+                <span class="demo-inventory-amount">{{selectedLocation.rafts}}</span>
+                <span class="demo-inventory-caption">RAFTS</span>
+            </div>
+        </div>
+    </div>
+
+</div>

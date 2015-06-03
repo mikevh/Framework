@@ -1,0 +1,26 @@
+﻿<div class="demo-employee-widget">
+    <div class="demo-employee-heading">
+        <i class="fa fa-user"></i>
+        <span class="demo-employee-title">Employee</span>
+    </div>
+    <div class="demo-employee-body" >
+        <div ng-if="!isLoaded && !hasError">
+            <i class="fa fa-2x fa-refresh fa-spin"></i>
+        </div>
+        <div ng-if="isLoaded" class="demo-employee-row">
+            <div class="demo-employee-name-area">
+                <h4>EMPLOYEE NAME</h4>
+                <p>{{selectedEmployee.name}}</p>
+                <h4>LOCAL RIVER</h4>
+                <p>{{selectedEmployee.location}}</p>
+            </div>
+            <div class="demo-employee-picture-area" 
+                 ng-style="selectedEmployee != null && {'background-image': 'url(/images/' + selectedEmployee.image + ')' }"></div>
+        </div>
+        <div ng-if="hasError" class="">
+            <h4>Error loading Employee</h4>
+            <button type="button" class="btn btn-primary" 
+                    ng-click="loadEmployee()">Reload</button>
+        </div>
+    </div>
+</div> 

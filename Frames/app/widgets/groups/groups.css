@@ -1,0 +1,14 @@
+﻿.groups-widget {
+   height: 100%;
+   width: 100%;
+   font-size: 16px;
+   min-height: 200px;
+}
+
+.groups-heading {
+    background-color: darkblue;
+    color: white;
+    height: 32px;
+    font-size: 15px;
+    line-height: 32px;
+}

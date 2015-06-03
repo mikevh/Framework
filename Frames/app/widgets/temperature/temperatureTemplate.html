@@ -1,0 +1,23 @@
+﻿<div class="demo-temperature-widget">
+    <div class="demo-temperature-heading">
+        <i class="fa fa-tachometer"></i>
+        <span>Temp</span>
+    </div>
+    <div class="demo-temperature-body" ng-style="selectedLocation != null && {'background-image': 'url(/images/' + selectedLocation.image + ')' }">
+        <div ng-if="!isLoaded && !hasError">
+            <i class="fa fa-2x fa-refresh fa-spin"></i>
+        </div>
+        <div ng-if="isLoaded" class="demo-temperature-view">
+            <div class="demo-temperature-river-name">
+                {{selectedLocation.name}}
+            </div>
+            <div class="demo-temperature-degrees">
+                {{selectedLocation.temperature}}°
+            </div>
+        </div>
+        <div ng-if="hasError" class="">
+            <h4>Error loading Temperature</h4>
+            <button type="button" class="btn btn-primary" ng-click="loadLocation()">Reload</button>
+        </div>
+    </div>
+</div>

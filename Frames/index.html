@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="app">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Demo App</title>
+    <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>-->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="lib/font-awesome/font-awesome.min.css" rel="stylesheet" />
+    <link href="lib/angular-gridster/angular-gridster.min.css" rel="stylesheet" />
+
+    <link href="dist/psFramework.css" rel="stylesheet" />
+
+    <link href="app/widgets/temperature/temperature.css" rel="stylesheet" />
+    <link href="app/widgets/inventory/inventory.css" rel="stylesheet" />
+    <link href="app/widgets/employee/employee.css" rel="stylesheet" />
+    <link href="app/widgets/groups/groups.css" rel="stylesheet" />
+
+    <link href="app/app.css" rel="stylesheet" />
+</head>
+<body class="container-fluid" ng-controller="appController">
+    
+    <div ng-switch="state">
+        <div ng-switch-when="unauthorized" class="sign-in-form">
+            <h2>Demo Framework App</h2>
+            <h4>Sign In</h4>
+            <form>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="text" value="" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control"/>
+                </div>
+            </form>
+            <button class="btn btn-default" ng-click="signIn()">Sign In</button>
+        </div>
+        <div ng-switch-default>
+            <ps-framework title="Angular Framework"
+                          subtitle="Demo App"
+                          icon-file="/images/logo.png">
+                <ps-menu>
+                    <ps-menu-item label="Dashboard" icon="fa-dashboard" route="dashboard"></ps-menu-item>
+                    <ps-menu-item label="Locations" icon="fa-location-arrow" route="locations"></ps-menu-item>
+                    <ps-menu-item label="Raft Guides" icon="fa-user" route="guides"></ps-menu-item>
+
+                    <ps-menu-group label="Equipment" icon="fa-gears">
+                        <ps-menu-item label="Rafts" icon="fa-unlink" route="rafts"></ps-menu-item>
+                        <ps-menu-item label="Paddles" icon="fa-magic" route="paddles"></ps-menu-item>
+                        <ps-menu-item label="Life Vests" icon="fa-life-ring" route="vests"></ps-menu-item>
+
+
+                        <!--<ps-menu-group label="Equipment2" icon="fa-gears">
+                            <ps-menu-item label="Rafts2" icon="fa-unlink" route="rafts"></ps-menu-item>
+                            <ps-menu-item label="Paddles2" icon="fa-magic" route="paddles"></ps-menu-item>
+                            <ps-menu-item label="Life Vests2" icon="fa-life-ring" route="vests"></ps-menu-item>
+                        </ps-menu-group>-->
+
+                    </ps-menu-group>
+
+                </ps-menu>
+            </ps-framework>
+        </div>
+    </div>
+
+
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/angular/angular.min.js"></script>
+    <!--<script src="lib/angular-resource/angular-resource.min.js"></script>-->
+    <script src="lib/angular-route/angular-route.min.js"></script>
+    <script src="lib/angular-gridster/angular-gridster.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="lib/ngstorage/ngStorage.min.js"></script>
+
+    <script src="dist/psFramework.js"></script>
+
+    <script src="app/app.js"></script>
+
+    <script src="app/directives/demoDashboardDirective.js"></script>
+    <script src="app/directives/demoGuidesDirective.js"></script>
+    <script src="app/directives/demoLocationsDirective.js"></script>
+
+    <script src="app/widgets/temperature/temperatureDirective.js"></script>
+    <script src="app/widgets/inventory/inventoryDirective.js"></script>
+    <script src="app/widgets/employee/employeeDirective.js"></script>
+    <script src="app/widgets/groups/groupsDirective.js"></script>
+
+    <script src="app/config.js"></script>
+    <script src="app/route.js"></script>
+    <script src="app/services/dataService.js"></script>
+    <script src="app/services/groupsApi.js"></script>
+    <script src="app/controller.js"></script>
+
+    <script src="app/dialogs/demoSelectLocationController.js"></script>
+    <script src="app/dialogs/demoSelectEmployeeController.js"></script>
+</body>
+</html>

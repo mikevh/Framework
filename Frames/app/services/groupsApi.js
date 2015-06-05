@@ -5,7 +5,21 @@
         });
     };
 
+    var all = function() {
+        return $http.get('/api/groups').then(function(result) {
+            return result.data;
+        });
+    };
+
+    var insert = function(data) {
+        return $http.post('/api/groups', data).then(function(result) {
+            return result.data;
+        });
+    };
+
     return {
-        find: find
+        find: find,
+        all: all,
+        insert: insert 
     };
 }]);

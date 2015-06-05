@@ -101,6 +101,9 @@
     <Content Include="app\widgets\groups\groups.css" />
     <Content Include="app\widgets\groups\groupsDirective.js" />
     <Content Include="app\widgets\groups\groupsTemplate.html" />
+    <Content Include="app\widgets\group\group.css" />
+    <Content Include="app\widgets\group\groupDirective.js" />
+    <Content Include="app\widgets\group\groupTemplate.html" />
     <Content Include="app\widgets\inventory\inventory.css" />
     <Content Include="app\widgets\inventory\inventoryDirective.js" />
     <Content Include="app\widgets\inventory\inventoryTemplate.html" />
@@ -108,9 +111,6 @@
     <Content Include="app\widgets\temperature\temperatureDirective.js" />
     <Content Include="app\widgets\temperature\temperatureTemplate.html" />
     <Content Include="bower.json" />
-    <Content Include="dist\app.css" />
-    <Content Include="dist\psFramework.css" />
-    <Content Include="dist\psFramework.js" />
     <Content Include="ext-modules\dashboard\dashboard.css" />
     <Content Include="ext-modules\dashboard\dashboardDirective.js" />
     <Content Include="ext-modules\dashboard\dashboardTemplate.html" />
@@ -138,32 +138,7 @@
     <Content Include="images\river2.jpg" />
     <Content Include="images\river3.jpg" />
     <Content Include="images\river4.jpg" />
-    <Content Include="lib\angular-bootstrap\ui-bootstrap-tpls.min.js" />
-    <Content Include="lib\angular-bootstrap\ui-bootstrap.min.js" />
-    <Content Include="lib\angular-gridster\angular-gridster.min.css" />
-    <Content Include="lib\angular-gridster\angular-gridster.min.js" />
-    <Content Include="lib\angular-resource\angular-resource.min.js" />
-    <Content Include="lib\angular-route\angular-route.min.js" />
-    <Content Include="lib\angular\angular.min.js" />
-    <Content Include="lib\bootstrap\css\bootstrap-theme.min.css" />
-    <Content Include="lib\bootstrap\css\bootstrap.min.css" />
-    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="lib\bootstrap\js\bootstrap.min.js" />
-    <Content Include="lib\font-awesome\font-awesome.min.css" />
-    <Content Include="lib\fonts\fontawesome-webfont.svg" />
-    <Content Include="lib\jquery\jquery.min.js" />
-    <Content Include="lib\ngstorage\ngStorage.min.js" />
     <Content Include="package.json" />
-    <Content Include="lib\bootstrap\css\bootstrap-theme.css.map" />
-    <Content Include="lib\bootstrap\css\bootstrap.css.map" />
-    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="lib\fonts\fontawesome-webfont.eot" />
-    <Content Include="lib\fonts\fontawesome-webfont.ttf" />
-    <Content Include="lib\fonts\fontawesome-webfont.woff" />
-    <Content Include="lib\fonts\fontawesome-webfont.woff2" />
-    <Content Include="lib\fonts\FontAwesome.otf" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -182,6 +157,7 @@
     <Content Include="ext-modules\menu\menuModule.js" />
     <Content Include="gulpfile.js" />
     <Content Include="index.html" />
+    <Content Include="test.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

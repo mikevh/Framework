@@ -5,10 +5,30 @@
     </div>
     
     <div class="groups-body">
-        <div class="groups-area">
-            <ul>
-                <li ng-repeat="g in groups">{{g.name}} - {{g.leader}}</li>
-            </ul>
+        <table class="table table-condensed table-striped">
+            <thead>
+                <tr>
+                    <th>Group</th>
+                    <th>Leader</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="g in groups">
+                    <td ng-click="groupClicked(g)">{{g.name}}</td>
+                    <td>{{g.leader}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            Name <input type="text" ng-model="n.name"/>
         </div>
+        <div class="col-sm-4">
+            Leader <input type="text" ng-model="n.leader"/>
+        </div>
+    </div>
+    <div class="row">
+        <button type="button" ng-click="add(n)" class="btn btn-primary">Add</button>
     </div>
 </div>

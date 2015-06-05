@@ -1,10 +1,17 @@
-﻿angular.module('app').directive('demoDashboard', ['$localStorage', function ($localStorage) {
+﻿angular.module('app').directive('demoDashboard', ['$localStorage', '$rootScope', function ($localStorage, $rootScope) {
     return {
         scope: {
 
         },
         template: '<ps-dashboard></ps-dashboard>',
         link: function (scope) {
+
+            $rootScope.$on('group-selected', function (evt, data) {
+                // TODO: get group template in a better way
+                var newWidget = angular.copy(scope.subWidgetDefinitions[0].settings);
+                newWidget.settings.id = data.id;
+                scope.widgets.push(newWidget);
+            });
 
             scope.title = 'dash dot dash';
 
@@ -17,15 +24,32 @@
                 swapping: false
             };
 
-            scope.widgetDefinitions = [
+            scope.subWidgetDefinitions = [
                 {
-                    title: 'Groups',
+                    title: 'Group',
                     settings: {
                         sizeX: 3,
                         sizeY: 3,
                         minSizeX: 2,
                         minSizeY: 2,
                         template: '<group></group>',
+                        settings: {
+
+                        }
+                    },
+                    menu: false,
+                }
+            ];
+
+            scope.widgetDefinitions = [
+                {
+                    title: 'Groups',
+                    settings: {
+                        sizeX: 3,
+                        sizeY: 4,
+                        minSizeX: 3,
+                        minSizeY: 4,
+                        template: '<groups></groups>',
                         settings: {
                             
                         }
